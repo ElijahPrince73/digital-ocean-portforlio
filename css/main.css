@@ -1284,3 +1284,14 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.carousel-control-next svg,
+.carousel-control-prev svg {
+  fill: #149ddd;
+}
+
+.fixed-height-image {
+  height: 900px; /* Set your desired fixed height */
+  width: 100%; /* Ensure image fills the width of its container */
+  object-fit: cover; /* Crop the image to fit the container while maintaining aspect ratio */
+}
