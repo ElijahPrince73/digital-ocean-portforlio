@@ -889,7 +889,7 @@ section,
   opacity: 1;
 }
 
-.portfolio .portfolio-content:hover img {
+.portfolio-image:hover img {
   transform: scale(1.1);
 }
 
@@ -1290,8 +1290,16 @@ section,
   fill: #149ddd;
 }
 
+.button-edward svg {
+  width: 50%;
+}
+
 .fixed-height-image {
   height: 900px; /* Set your desired fixed height */
   width: 100%; /* Ensure image fills the width of its container */
   object-fit: cover; /* Crop the image to fit the container while maintaining aspect ratio */
+}
+
+.modal-dialog-edward-jones {
+  max-width: 70%;
 }
