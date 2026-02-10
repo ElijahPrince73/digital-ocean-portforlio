@@ -304,3 +304,45 @@ document.addEventListener("keydown", (e) => {
     changeSlide(1);
   }
 });
+
+// Scroll reveal animation
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+document.querySelectorAll(".reveal").forEach((el) => {
+  revealObserver.observe(el);
+});
+
+// Active nav link highlight on scroll
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+const highlightNav = () => {
+  const scrollY = window.scrollY + 120;
+  sections.forEach((section) => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute("id");
+    if (scrollY >= top && scrollY < top + height) {
+      navLinks.forEach((link) => {
+        link.style.color = "";
+        link.style.background = "";
+        if (link.getAttribute("href") === `#${id}`) {
+          link.style.color = "var(--accent-primary)";
+          link.style.background = "rgba(79, 70, 229, 0.08)";
+        }
+      });
+    }
+  });
+};
+
+window.addEventListener("scroll", highlightNav, { passive: true });
