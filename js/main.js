@@ -93,9 +93,11 @@ const projects = {
     description:
       "A dynamic web platform that brought competitive player matchups to the browser. Users could watch players compete live, place wagers on individual matchups, and follow results in real-time. The web experience expanded on the mobile app by making matches easier to view, wagers easier to place, and player activity easier to track. The platform included comprehensive internal dashboards that empowered support and marketing teams to manage users, monitor activity, and respond quickly during live gaming events.",
     screenshots: [
+      "./assets/portfolio-images/1v1Me/Play Tab.webp",
+      "./assets/portfolio-images/1v1Me/Default.webp",
+      "./assets/portfolio-images/1v1Me/time-till-tournament-start.webp",
+      "./assets/portfolio-images/1v1Me/Place A Stake.webp",
       "./assets/portfolio-images/1v1Me/GODMODE-DEMO.mp4",
-      "./assets/portfolio-images/1v1Me/home.webp",
-      "./assets/portfolio-images/1v1Me/stake.webp",
     ],
     features: [
       "Real-time live match viewing and streaming integration",
